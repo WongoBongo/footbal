@@ -5,8 +5,253 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Дипломный проект</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header class="header">
+    <div class="container">
+      <div class="menu">
+        <div class="logo menu__logo">
+          <a class="logo__image" href="index.html"><img src="img/header/logo.png" alt=""></a>
+          <ul class="logo__city">
+            <li class="logo__item"><a href="#">Астана</a></li>
+          </ul>
+        </div>
+        <nav class="nav menu__nav">
+          <a href="#" class="nav__item">О нас</a>
+          <a href="#" class="nav__item">Статистика</a>
+          <a href="#" class="nav__item">Новости</a>
+          <a href="#" class="nav__item nav__item">Контакты</a>
+        </nav>
+        <div class="contacts menu__contacts">
+          <a  class="contacts__phone" href="+7(702)440-70-07"><span class="contacts__phone_primary">+7(702)</span>440-70-07</a>
+          <button class="contacts__button button button_primary">Перезвоните мне</button>
+        </div>
+      </div>
+      <!-- menu -->
+      <div class="header__content">
+        <h1 class="title header__title">Академия футбола</h1>
+        <h2 class="subtitle header__subtitle">для детей от 3 до 16 лет</h2>
+        <form action="" class="header__form form">
+          <div class="input-group header__input-group">
+            <label for="header-user-name" class="label form__label label_light"></label>
+            <input type="text" id="header-user-name" name="userName" class="input form__input header__input input_light"
+              placeholder="Ваше имя:">
+          </div>
+          <div class="input-group header__input-group">
+            <label for="header-user-phone" class="label form__label label_light"></label>
+            <input type="tel" name="userPhone" class="input form__input header__input input_light" id="header-user-phone"
+              placeholder="Номер телефона:">
+          </div>
+          <button class="button button_primary  form__button">Записаться на тренировку</button>
+        </form>
+        <!-- header__form -->
+        <div class="header__social social">
+          <span class="social__title">Поделись с друзьями, им будет интересно!</span>
+          <div class="social__icons">
+            <a class="social__icons_item" href="#"><img src="img/header/vk.png" alt="" ></a>
+            <a class="social__icons_item" href="#"><img src="img/header/instagram.png" alt="" ></a>
+            <a class="social__icons_item" href="#"><img src="img/header/youtube.png" alt="" ></a>
+          </div>
+        </div>
+        <!-- header__social -->
+      </div>
+      <!-- header__content -->
+    </div>
+    <!-- container -->
+  </header>
+  <main class="main">
+    <section class="hero">
+      <div class="container hero__container">
+        <h2 class="hero__title title">
+           Более <span class="hero__title_blue">800 детей</span> прошли обучение в нашей академии!
+        </h2>
+        <div class="hero__icon">
+          <img src="img/hero/soccerball.svg" alt="">
+        </div>
+        <div class="hero__advantages advantages row">
+          <div class="advantages__item">
+            <div class="advantages__item__image">
+              <img src="img/hero/ball.png" alt="">
+            </div> 
+            <span class="advantages__text">Новый профессиональный инвентарь и экипировка</span>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__item__image">
+              <img src="img/hero/field.png" alt="">
+            </div>
+            <span class="advantages__text">Современые спортивные залы и мини-футбольные поля</span>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__item__image">
+              <img src="img/hero/prize.png" alt="">
+            </div>
+            <span class="advantages__text">Товарищеские матчи с детскими футбольными школами</span>
+          </div>
+          <div class="advantages__item">
+            <div class="advantages__item__image">
+              <img src="img/hero/star.png" alt="">
+            </div>
+            <span class="advantages__text">Социальная программа и скидки для семей с особым статусом</span>
+          </div>
+        </div>
+        <!-- /.advantages -->
+        <div class="description hero__descriptiption row">
+          <div class="description__item">
+            <h2 class="description__title title_bold">Академия</h2>
+            <span class="description__opportunity">предоставляет возможность каждому ребенку почувствовать себя</span>
+            <h2 class="description__title title description__title_blue title_bold">футболистом</h2>
+          </div>
+          <div class="description__item">
+            <p class="description__text">
+            <span class="description__text_bold">Академия «Pro Football»</span> предоставляет возможность каждому ребенку почув-ствовать себя футболистом любительского и
+            профессионального уровней. Юный воспитанник получит как правильное физиологическое развитие, так и морально –
+            психологическое, овладевая всеми навыками футболиста, игры в команде и индивидуального мастерства.
+            <p class="description__text description__text_two">Методика тренировок разрабатывается опытными тренерами на основе мето-дик ведущих европейских футбольных центров.</p> 
+            <span class="description__text_bold">Все тренеры и помощники тренеров обладают лицензиями категорий «В», «С» UEFA.</span>
+            </p>
+        </div>
+          <div class="description__item">
+            <h2 class="description__subtitle title">
+              Посмотрите наше видео
+            </h2>
+            <div class="description__video"><img src="img/hero/play.svg" alt="" ></div>
+          </div>
+        </div>
+        <!-- /.description hero__descriptiption -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- hero -->
+    <section class="section group">
+      <div class="container">
+        <h2 class="group__title title">Наши группы</h2>
+        <div class="hero__icon group__icon">
+          <img src="img/hero/soccerball.svg" alt="">
+        </div>
+        <div class="group__block block row">
+          <div class="block__item row__item">
+            <h3 class="block__title">"BabyStart"</h3>
+            <span class="block__age">В этой группе тренируются дети от 3- 4,5 лет!</span>
+            <span class="block__price">от 12 690 тенге</span>
+            <button class="button block__button">Подробнее</button>
+          </div>
+          <div class="block__item row__item">
+            <h3 class="block__title">"Beginners"</h3>
+            <span class="block__age">В этой группе тренируются дети от 5- 6 лет!</span>
+            <span class="block__price">от 14 290 тенге</span>
+            <button class="button block__button">Подробнее</button>
+          </div>
+          <div class="block__item row__item">
+            <h3 class="block__title">"Ювеналы"</h3>
+            <span class="block__age">В этой группе тренируются дети от 7- 8 лет!</span>
+            <span class="block__price">от 15 300 тенге</span>
+            <button class="button block__button">Подробнее</button>
+          </div>
+          <div class="block__item row__item">
+            <h3 class="block__title">"Ювеналы 2"</h3>
+            <span class="block__age">В этой группе тренеруются дети от 9- 12 лет!</span>
+            <span class="block__price">от 17 500 тенге</span>
+            <button class="button block__button">Подробнее</button>
+          </div>
+          <div class="block__item row__item">
+            <h3 class="block__title">"Юниоры"</h3>
+            <span class="block__age">В этой группе тренируются дети от 13- 16 лет!</span>
+            <span class="block__price">от 18 900 тенге</span>
+            <button class="button block__button">Подробнее</button>
+          </div>
+          <!-- group__block -->
+        </div>
+      </div>
+      <!--container  -->
+    </section>
+    <!-- group -->
+    <section class="abonnement section">
+      <div class="container">
+          <h2 class=" abonnement__title title">Наши абонементы</h2>
+          <div class="hero__icon abonnement__icon">
+            <img src="img/hero/soccerball.svg" alt="">
+          </div>
+        <div class="row abonnement__row">
+          <div class="abonnement__subscription subscription row__item">
+            <h3 class="subscription__title">Абонемент <span class="subscription__title_uppercase">“Light”</span> </h3>
+            <ul class="subscription__list list">
+              <li class="list__item">2 раза в неделю</li>
+              <li class="list__item">По выходным дням</li>
+              <li class="list__item">1,5 часа занятий</li>
+              <li class="list__item">8 занятий в месяц</li>
+              <li class="list__item">Бесплатная форма</li>
+            </ul>
+            <h4 class="subscription__subtitle">бесплатная пробная тренировка</h4>
+            <button class="subscription__button button">Записаться на тренировку</button>
+          </div>
+          <div class="abonnement__subscription subscription row__item">
+            <h3 class="subscription__title subscription__title_intensive">Абонемент <span class="subscription__title_uppercase">“INTENSIVE”</span> </h3>
+            <ul class="subscription__list list">
+              <li class="list__item">2 раза в неделю</li>
+              <li class="list__item">По выходным дням</li>
+              <li class="list__item">1,5 часа занятий</li>
+              <li class="list__item">8 занятий в месяц</li>
+              <li class="list__item">Бесплатная форма</li>
+            </ul>
+            <h4 class="subscription__subtitle">бесплатная пробная тренировка</h4>
+            <button class="subscription__button button">Записаться на тренировку</button>
+          </div>
+        </div>
+      </div>
+    </section>
   
+    <section class="footer_branches branches">
+      <div class="container">
+        <h2 class="branches__title abonnement__title title">Наши филиалы</h2>
+        <div class="hero__icon branches__icon">
+          <img src="img/hero/soccerball.svg" alt="">
+        </div>
+        <div class="branches__content">
+          <div class="buttons content__buttons">
+            <button class="map-link" data-map="QSI" ><span class="map-link_bold">QSI</span><br>ул. Баян Сулу, 15</button>
+            <button class="map-link" data-map="Дворец «Жастар»" ><span class="map-link_bold">Дворец «Жастар»</span><br>проспект Республики, 34</button>
+            <button class="map-link" data-map="Тарлан АРЕНА"><span class="map-link_bold">Тарлан АРЕНА</span><br>ул. Г. Алиева с пересечением Тауелсыздык</button>
+            <button class="map-link" data-map="Ташенова 16А"><span class="map-link_bold">Ташенова 16А</span><br>улицаТашенова 16А</button>
+          </div>
+          <div  id="map" class="map brunches__map">
+            
+          </div >
+        </div>
+        <!-- /.filial -->
+      </div>
+    </section>
+    </main>
+    <footer class="footer">
+    <!-- /.branches -->
+    <div class="container">
+      <div class="menu footer__menu">
+        <div class="logo menu__logo">
+          <a class="logo__image" href="index.html"><img src="img/header/logo.png" alt=""></a>
+          <ul class="logo__city">
+            <li class="logo__item"><a href="#">Астана</a></li>
+          </ul>
+        </div>
+        <nav class="nav menu__nav">
+          <a href="#" class="nav__item">О нас</a>
+          <a href="#" class="nav__item">Статистика</a>
+          <a href="#" class="nav__item">Новости</a>
+          <a href="#" class="nav__item nav__item">Контакты</a>
+        </nav>
+        <div class="contacts menu__contacts">
+          <a class="contacts__phone" href="+7(702)440-70-07"><span class="contacts__phone_primary">+7(702)</span>440-70-07</a>
+          <button class="contacts__button button button_primary">Перезвоните мне</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <script>
+   
+
+      
+  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
