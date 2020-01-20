@@ -3,14 +3,18 @@
   html
     font-size: 12px
   .nav
+    margin-right: 0
+    margin-left: 130px
     &__item
-      margin-right: 0.7rem
+      margin-right: 0.3rem
       padding-right: 0.54rem
+
   .contacts
     &__phone
       margin-right: 0
   .logo
     &__city
+      
       margin-left: 1rem
 
 @media screen and ( max-width: 992px )
@@ -18,15 +22,24 @@
     display: none
 
   .header
-    height: 65vh
+    
     &__title
       font-size: 48px
     &__subtitle
       font-size: 24px
+    &__input-group
+      margin-right: 0
     .form
       max-width: 500px
     .social__title
       font-size: 14px
+  .logo
+    &__city
+      top: 0
+      margin-left: 0.5rem
+    &__image
+        width: 81px
+        height: 81px
 
 @media screen and ( max-width: 600px )
   .header
@@ -37,6 +50,8 @@
   .logo
     &__city
       display: none
+    
+      
   
   .contacts
     &__button
@@ -44,7 +59,7 @@
   
 
 
-@media screen and ( max-width: 380px )
+@media screen and ( max-width: 400px )
   .header
     &__title
       font-size: 24px
@@ -54,24 +69,32 @@
     display: block
     max-width: 150px
     margin: auto
+  .form
+    &__button
+      padding: 20px 30px
+  .block
+    &__item
+  .subscription
+    &__button
+      padding: 22px 30px
+      
+     
 
   /* стили для header */
 
 @media screen and ( max-width: 1230px )
-  .description
-    flex-direction: column
-    &__item
-     margin-bottom: 2rem
+ 
   .hero
     &__advantages
       margin: auto
       margin-top: 2.5rem
       
-      max-width: 580px
-      flex-wrap: wrap
+      
+     
   .advantages
     &__item
       margin-bottom: 3rem
+
   
 
 
@@ -82,6 +105,8 @@
 
     &__contaier
     &__advantages
+      flex-wrap: wrap
+      max-width: 580px
      
   .description
     &__title
@@ -89,6 +114,14 @@
       margin-top: 0
       &_blue
         font-size: 32px
+  .description
+    flex-direction: column
+    &__item
+      margin-bottom: 2rem
+    &__text
+      text-align: center
+      &_bold
+        text-align: center
 
 
 
@@ -99,8 +132,40 @@
     &__contaier
     &__advantages
       flex-direction: column
+  #map
+    max-height: 300px
+  
+  .content__buttons_contacts
+    flex-direction: column
+    max-width: 263px
+    margin: auto
+  
+  .branches
+    &__contacts
+      flex-direction: column
+      
+    &__item
+      &_place
+    &__col
+      
+      margin: auto
+      &_place
+        max-width: 480px
+        &::after
+          display: none
+  .group
+    &__block
+      max-width: 280px!important
+  .block
+    
+    &__item
+      max-width: 280px
+      height: 330px
+  .footer
+    &__rights
+      max-width: 200px
 
-    /* стили для секции hero */ 
+
 
 
 @media screen and ( max-width: 992px )
@@ -115,8 +180,7 @@
       margin-right: 0
       &:nth-child(4)
         margin-left: 0
-   
-/* стили для секции group */  
+
 
 
 @media screen and ( max-width: 992px )
@@ -130,3 +194,113 @@
     &:last-child
       margin: auto
       margin-top: 3rem
+  .branches
+    &__content
+      flex-wrap: wrap
+      &::before
+        display: none
+    &__map
+  .content
+    &__buttons
+      margin: 3rem auto
+      &_contacts
+        flex-wrap: wrap
+  #question-user-question
+    width: 400px
+    margin-left: 0
+  .column__full-width
+    margin-left: 0
+
+@media screen and ( max-width: 992px )
+  .statistics
+    &__form
+      flex-direction: column
+    &__input-group
+      margin-bottom: 20px
+    &__child
+  .child
+    &__list
+      flex-direction: column
+  thead
+    display: none
+  .achievements
+    &__title
+      padding-left: 0
+
+    td
+      display: block
+      padding-left: 50%
+      &:nth-child(5)
+        padding-right: 0
+      &::before
+        content: attr(data-label)
+        position: absolute
+        left: 2%
+  .news
+    &__block
+      flex-wrap: wrap
+    &__item
+      order: 1
+    &__image
+      order: 2
+      
+      
+@media screen and ( max-width: 600px )
+  .statistics
+    &__input
+      width: 200px
+      
+  .achievements
+    tr
+      border-bottom: 80px solid #fff
+    td
+      display: block
+      padding-left: 0
+      text-align: center
+      border-bottom: none
+      
+      border-top: none
+      &::before
+        display: block
+        position: static
+        padding: 10px 0
+        color: #fff
+        background-color: $blue    
+  .child
+    flex-direction: column
+    &__photo
+      margin: auto
+    &__list
+      margin: auto
+  .news
+    &__image
+      margin: auto
+@media screen and ( max-width: 992px )
+  .page
+    &__image_two
+      flex-direction: column
+      margin: 42px auto
+      max-width: 555px
+      img
+        overflow: visible
+        max-width: 555px
+        height: 300px
+        &:first-child
+
+          margin-right: 0 
+          margin-bottom: 42px  
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  .hero
+    &__icon
+      margin-left: 490px
+  .branches
+    &__content
+      &::before
+        top: 40px
+  .subscription__button
+    width: 272px
+  .description__video
+    margin-left: 50px
+  .form_group
+    flex-wrap: nowrap

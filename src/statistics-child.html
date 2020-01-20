@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Дипломный проект</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="menu">
+        <div class="logo menu__logo">
+          <a class="logo__image" href="index.html"><img src="img/header/logo.png" alt=""></a>
+          <div class="logo__drodown dropdown">
+            <ul class="logo__city">
+              <li class="logo__item">Астана <img src="img/header/arrow.svg" alt=""></li>
+        
+              <li class="logo__item">Астана</li>
+            </ul>
+          </div>
+        </div>
+        <nav class="nav menu__nav">
+          <a href="index.html" class="nav__item">О нас</a>
+          <a href="statistics-child.html" class="nav__item">Статистика</a>
+          <a href="news.html" class="nav__item">Новости</a>
+          <a href="contacts.html" class="nav__item nav__item">Контакты</a>
+        </nav>
+        <div class="contacts menu__contacts">
+          <a class="contacts__phone" href="+7(702)440-70-07"><span
+              class="contacts__phone_primary">+7(702)</span>440-70-07</a>
+          <button class="contacts__button button button_primary" data-toggle="modal">Перезвоните мне</button>
+        </div>
+      </div>
+      <!-- menu -->
+
+    </div>
+    <!-- container -->
+  </header>
+  <main class="main">
+    <section class="link">
+      <div class="container">
+        <div class="link__block">
+          <span class="link__text">
+            <a href="index.html">Главная</a><img src="img/contacts/contacts-icon.png" alt="">
+            <a class="link__text" href="contacts.html">Статистика</a><img src="img/contacts/contacts-icon.png" alt="">
+            <a class="link__text_active" href="statistics-child.html">Дмитрий Иванов</a>
+          </span>
+        </div>
+      </div>
+    </section>
+  <main>
+    <section class="statistics">
+      <div class="container">
+        <form action="" class="statistics__form form">
+          <div class="input-group statistics__input-group">
+            <label for="statistics-user-name" class="label form__label label_light"></label>
+            <input type="text" id="statistics-user-name" name="userName" class="input form__input statistics__input input_light"
+              placeholder="Имя и Фамилия">
+          </div>
+          <button class="statistics__button button button_primary  form__button">Поиск статистики</button>
+        </form>
+        <div class="statistics__child child">
+          <div class="child__photo"><img src="img/statictics/child.png" alt=""></div>
+          <div class="child__list">
+            <ul class="child__name">
+              <li class="child__name_list">Имя:</li>
+              <li class="child__name_list">Фамилия:</li>
+              <li class="child__name_list">Дата рождения:</li>
+              <li class="child__name_list">Группа:</li>
+              <li class="child__name_list">Филиал:</li>
+            </ul>
+            <ul class="child__name child__name_bold">
+              <li class="child__name_list child__name_list_bold">Дмитрий</li>
+              <li class="child__name_list child__name_list_bold">Иванов</li>
+              <li class="child__name_list child__name_list_bold">11 ноября 2006 года</li>
+              <li class="child__name_list child__name_list_bold">"Ювеналы 2"</li>
+              <li class="child__name_list child__name_list_bold">Дворец «Жастар»</li>
+            </ul>
+          </div>
+        </div>
+        <!-- statistics__child child" -->
+        <table class="child__achievements achievements">
+          <thead>
+            <tr>
+              <th class="achievements__title">Дата</th>
+              <th class="achievements__title">Бег 30 метров</th>
+              <th class="achievements__title">Удар по воротам</th>
+              <th class="achievements__title">Результативные пасы</th>
+              <th class="achievements__title">Коментарии тренера</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Дата"><span class="achievements__text">23.10.2016</span></td>
+              <td data-label="Бег 30 метров"><span class="achievements__text">30 секунд</span></td>
+              <td data-label="Удар по воротам"><span class="achievements__text">3/6</span></td>
+              <td data-label="Результативные пасы"><span class="achievements__text">8/12</span>  </td>
+              <td data-label="Коментарии тренера"><span class="achievements__text">Отлично выкладывался на протяжении тренировки</span></td>
+            </tr>
+            <tr>
+              <td data-label="Дата"><span class="achievements__text">23.10.2016</span></td>
+              <td data-label="Бег 30 метров"><span class="achievements__text">30 секунд</span></td>
+              <td data-label="Удар по воротам"><span class="achievements__text">3/6</span></td>
+              <td data-label="Результативные пасы"><span class="achievements__text">8/12</span> </td>
+              <td data-label="Коментарии тренера"><span class="achievements__text">Отлично выкладывался на протяжении
+                  тренировки</span></td>
+            </tr>
+            <tr>
+              <td data-label="Дата"><span class="achievements__text">23.10.2016</span></td>
+              <td data-label="Бег 30 метров"><span class="achievements__text">30 секунд</span></td>
+              <td data-label="Удар по воротам"><span class="achievements__text">3/6</span></td>
+              <td data-label="Результативные пасы"><span class="achievements__text">8/12</span> </td>
+              <td data-label="Коментарии тренера"><span class="achievements__text">Отлично выкладывался на протяжении
+                  тренировки</span></td>
+            </tr>
+            <tr>
+              <td data-label="Дата"><span class="achievements__text">23.10.2016</span></td>
+              <td data-label="Бег 30 метров"><span class="achievements__text">30 секунд</span></td>
+              <td data-label="Удар по воротам"><span class="achievements__text">3/6</span></td>
+              <td data-label="Результативные пасы"><span class="achievements__text">8/12</span> </td>
+              <td data-label="Коментарии тренера"><span class="achievements__text">Отлично выкладывался на протяжении
+                  тренировки</span></td>
+            </tr>
+            <tr>
+              <td data-label="Дата"><span class="achievements__text">23.10.2016</span></td>
+              <td data-label="Бег 30 метров"><span class="achievements__text">30 секунд</span></td>
+              <td data-label="Удар по воротам"><span class="achievements__text">3/6</span></td>
+              <td data-label="Результативные пасы"><span class="achievements__text">8/12</span> </td>
+              <td data-label="Коментарии тренера"><span class="achievements__text">Отлично выкладывался на протяжении
+                  тренировки</span></td>
+            </tr>
+            <tr>
+              <td data-label="Дата"><span class="achievements__text">23.10.2016</span></td>
+              <td data-label="Бег 30 метров"><span class="achievements__text">30 секунд</span></td>
+              <td data-label="Удар по воротам"><span class="achievements__text">3/6</span></td>
+              <td data-label="Результативные пасы"><span class="achievements__text">8/12</span> </td>
+              <td data-label="Коментарии тренера"><span class="achievements__text">Отлично выкладывался на протяжении
+                  тренировки</span></td>
+            </tr>
+            <tr>
+              <td data-label="Дата"><span class="achievements__text">23.10.2016</span></td>
+              <td data-label="Бег 30 метров"><span class="achievements__text">30 секунд</span></td>
+              <td data-label="Удар по воротам"><span class="achievements__text">3/6</span></td>
+              <td data-label="Результативные пасы"><span class="achievements__text">8/12</span> </td>
+              <td data-label="Коментарии тренера"><span class="achievements__text">Отлично выкладывался на протяжении
+                  тренировки</span></td>
+            </tr>
+            <tr>
+              <td data-label="Дата"><span class="achievements__text">23.10.2016</span></td>
+              <td data-label="Бег 30 метров"><span class="achievements__text">30 секунд</span></td>
+              <td data-label="Удар по воротам"><span class="achievements__text">3/6</span></td>
+              <td data-label="Результативные пасы"><span class="achievements__text">8/12</span> </td>
+              <td data-label="Коментарии тренера"><span class="achievements__text">Отлично выкладывался на протяжении
+                  тренировки</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.statistics -->
+  
+  </main> 
+
+  <footer class="footer">
+  
+    <div class="container__contacts">
+      <div class="menu footer__menu">
+        <div class="logo menu__logo">
+          <a class="logo__image footer_logo__image" href="index.html"><img src="img/footer/logo.png" alt=""></a>
+          <div class="logo__drodown dropdown">
+            <ul class="logo__city logo__city_footer">
+              <li class="logo__item">Астана <img src="img/header/arrow.svg" alt=""></li>
+              <li class="logo__item">Астана</li>
+            </ul>
+          </div>
+        </div>
+        <nav class="nav menu__nav footer__nav">
+          <a href="contacts.html" class="nav__item">О нас</a>
+          <a href="#" class="nav__item">Статистика</a>
+          <a href="#" class="nav__item">Новости</a>
+          <a href="#" class="nav__item nav__item">Контакты</a>
+        </nav>
+        <div class="contacts menu__contacts">
+          <a class="contacts__phone" href="+7(702)440-70-07"><span
+              class="contacts__phone_primary">+7(702)</span>440-70-07</a>
+          <button class="contacts__button button button_primary" data-toggle="modal">Перезвоните мне</button>
+        </div>
+      </div>
+      <div class="footer__contacts">
+        <span class="footer__rights">© www.pro-football.kz 2008-2015. Все права защищены.</span>
+        <div class="footer__logo">
+          <span class="footer__text">Сделано в:</span>
+          <div class="footer__image">
+            <img src="img/footer/footer-logo.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="modal">
+    <div class="modal__dialog">
+      <button class="modal__close"></button>
+      <h3 class="modal__title">Обратный звонок</h3>
+      <form action="send.php" method="POST" class="form modal__form">
+        <div class="input-group modal__input-group">
+          <label for="modal-user-name" class="label form__label label_light"></label>
+          <input type="text" name="userName" id="modal-user-name" class="input form__input modal__input input_light"
+            placeholder="Как вас зовут:">
+        </div>
+        <div class="input-group modal__input-group">
+          <label for="modal-user-phone" class="label form__label label_light"></label>
+          <input type="tel" name="userPhone" class="input form__input modal__input input_light" id="modal-user-phone"
+            placeholder="Ваш номер телефона:">
+        </div>
+
+        <button class="button button_primary modal__button">Перезвоните мне</button>
+      </form>
+      <!-- /.form modal__form -->
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+  <div class="window">
+    <div class="window__dialog">
+      <button class="window__close"></button>
+      <h3 class="window__title">Спасибо за заявку</h3>
+      <h4 class="window__subtitle">Наш менеджер перезвонит вам в течение 15 минут</h4>
+      <a class="window__link window__button button_primary" href="https://vk.com/glo_academy">Подписаться на нас в
+        соцсетях</a>
+  
+    </div>
+    <!-- /.window__dialog -->
+  </div>
+  <!-- /.window -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

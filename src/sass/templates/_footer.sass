@@ -1,6 +1,6 @@
 .footer
   position: relative
-  background: url('/src/img/footer/footerbg.jpg') no-repeat center / cover
+  background: url('../img/footer/footerbg.jpg') no-repeat center / cover
   &::before
     content: ''
     position: absolute
@@ -10,6 +10,28 @@
     height: 100%
     background-color: rgba($dark, 0.7);
   &__menu
-    border-bottom: 1px solid #292929; 
+    padding: 2rem 0
+    border-bottom: 1px solid $light; 
+  &__nav
+    margin-right: 70px
+  &__contacts
+    margin-top: 2.9rem 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    opacity: 0.5;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 17px;
+  &__logo
+    display: flex  
+    align-items: center
+    &_image
+      width: 83px
+      height: 83px
+  &__text
+    margin-right: 0.57rem
   
   

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Дипломный проект</title>
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,26 +14,30 @@
       <div class="menu">
         <div class="logo menu__logo">
           <a class="logo__image" href="index.html"><img src="img/header/logo.png" alt=""></a>
-          <ul class="logo__city">
-            <li class="logo__item"><a href="#">Астана</a></li>
-          </ul>
+          <div class="logo__drodown dropdown">
+            <ul class="logo__city">
+              <li class="logo__item">Астана <img src="img/header/arrow.svg" alt=""></li>
+                
+              <li class="logo__item">Астана</li>
+            </ul>
+          </div>
         </div>
         <nav class="nav menu__nav">
-          <a href="#" class="nav__item">О нас</a>
-          <a href="#" class="nav__item">Статистика</a>
-          <a href="#" class="nav__item">Новости</a>
-          <a href="#" class="nav__item nav__item">Контакты</a>
+          <a href="index.html" class="nav__item">О нас</a>
+          <a href="statistics-child.html" class="nav__item">Статистика</a>
+          <a href="news.html" class="nav__item">Новости</a>
+          <a href="contacts.html" class="nav__item nav__item">Контакты</a>
         </nav>
         <div class="contacts menu__contacts">
           <a  class="contacts__phone" href="+7(702)440-70-07"><span class="contacts__phone_primary">+7(702)</span>440-70-07</a>
-          <button class="contacts__button button button_primary">Перезвоните мне</button>
+          <button class="contacts__button button button_primary" data-toggle="modal" >Перезвоните мне</button>
         </div>
       </div>
       <!-- menu -->
       <div class="header__content">
         <h1 class="title header__title">Академия футбола</h1>
         <h2 class="subtitle header__subtitle">для детей от 3 до 16 лет</h2>
-        <form action="" class="header__form form">
+        <form action="send.php" method="POST" class="form header__form ">
           <div class="input-group header__input-group">
             <label for="header-user-name" class="label form__label label_light"></label>
             <input type="text" id="header-user-name" name="userName" class="input form__input header__input input_light"
@@ -40,10 +45,10 @@
           </div>
           <div class="input-group header__input-group">
             <label for="header-user-phone" class="label form__label label_light"></label>
-            <input type="tel" name="userPhone" class="input form__input header__input input_light" id="header-user-phone"
+            <input type="tel" name="userPhone" id="header-user-phone" class="input form__input header__input input_light" 
               placeholder="Номер телефона:">
           </div>
-          <button class="button button_primary  form__button">Записаться на тренировку</button>
+          <button class="button button_primary header__button  form__button">Записаться на тренировку</button>
         </form>
         <!-- header__form -->
         <div class="header__social social">
@@ -69,7 +74,7 @@
         <div class="hero__icon">
           <img src="img/hero/soccerball.svg" alt="">
         </div>
-        <div class="hero__advantages advantages row">
+        <div class="hero__advantages advantages">
           <div class="advantages__item">
             <div class="advantages__item__image">
               <img src="img/hero/ball.png" alt="">
@@ -96,7 +101,7 @@
           </div>
         </div>
         <!-- /.advantages -->
-        <div class="description hero__descriptiption row">
+        <div class="description hero__descriptiption ">
           <div class="description__item">
             <h2 class="description__title title_bold">Академия</h2>
             <span class="description__opportunity">предоставляет возможность каждому ребенку почувствовать себя</span>
@@ -115,7 +120,11 @@
             <h2 class="description__subtitle title">
               Посмотрите наше видео
             </h2>
-            <div class="description__video"><img src="img/hero/play.svg" alt="" ></div>
+            <div class="description__video">
+              <a class="video__play" data-fancybox href="https://www.youtube.com/watch?v=Uz7gZ9K9eLU">
+                <img src="img/hero/play.svg" alt="">
+            </a> 
+            </div>
           </div>
         </div>
         <!-- /.description hero__descriptiption -->
@@ -134,31 +143,31 @@
             <h3 class="block__title">"BabyStart"</h3>
             <span class="block__age">В этой группе тренируются дети от 3- 4,5 лет!</span>
             <span class="block__price">от 12 690 тенге</span>
-            <button class="button block__button">Подробнее</button>
+            <button class="button block__button" data-toggle="modal">Подробнее</button>
           </div>
           <div class="block__item row__item">
             <h3 class="block__title">"Beginners"</h3>
             <span class="block__age">В этой группе тренируются дети от 5- 6 лет!</span>
             <span class="block__price">от 14 290 тенге</span>
-            <button class="button block__button">Подробнее</button>
+            <button class="button block__button" data-toggle="modal">Подробнее</button>
           </div>
           <div class="block__item row__item">
             <h3 class="block__title">"Ювеналы"</h3>
             <span class="block__age">В этой группе тренируются дети от 7- 8 лет!</span>
             <span class="block__price">от 15 300 тенге</span>
-            <button class="button block__button">Подробнее</button>
+            <button class="button block__button" data-toggle="modal">Подробнее</button>
           </div>
           <div class="block__item row__item">
             <h3 class="block__title">"Ювеналы 2"</h3>
             <span class="block__age">В этой группе тренеруются дети от 9- 12 лет!</span>
             <span class="block__price">от 17 500 тенге</span>
-            <button class="button block__button">Подробнее</button>
+            <button class="button block__button" data-toggle="modal">Подробнее</button>
           </div>
           <div class="block__item row__item">
             <h3 class="block__title">"Юниоры"</h3>
             <span class="block__age">В этой группе тренируются дети от 13- 16 лет!</span>
             <span class="block__price">от 18 900 тенге</span>
-            <button class="button block__button">Подробнее</button>
+            <button class="button block__button" data-toggle="modal">Подробнее</button>
           </div>
           <!-- group__block -->
         </div>
@@ -169,7 +178,7 @@
     <section class="abonnement section">
       <div class="container">
           <h2 class=" abonnement__title title">Наши абонементы</h2>
-          <div class="hero__icon abonnement__icon">
+          <div class="hero__icon  abonnement__icon">
             <img src="img/hero/soccerball.svg" alt="">
           </div>
         <div class="row abonnement__row">
@@ -183,7 +192,7 @@
               <li class="list__item">Бесплатная форма</li>
             </ul>
             <h4 class="subscription__subtitle">бесплатная пробная тренировка</h4>
-            <button class="subscription__button button">Записаться на тренировку</button>
+            <button class="subscription__button button" data-toggle="modal">Записаться на тренировку</button>
           </div>
           <div class="abonnement__subscription subscription row__item">
             <h3 class="subscription__title subscription__title_intensive">Абонемент <span class="subscription__title_uppercase">“INTENSIVE”</span> </h3>
@@ -195,63 +204,110 @@
               <li class="list__item">Бесплатная форма</li>
             </ul>
             <h4 class="subscription__subtitle">бесплатная пробная тренировка</h4>
-            <button class="subscription__button button">Записаться на тренировку</button>
+            <button class="subscription__button button" data-toggle="modal">Записаться на тренировку</button>
           </div>
         </div>
       </div>
     </section>
   
-    <section class="footer_branches branches">
-      <div class="container">
-        <h2 class="branches__title abonnement__title title">Наши филиалы</h2>
-        <div class="hero__icon branches__icon">
-          <img src="img/hero/soccerball.svg" alt="">
-        </div>
-        <div class="branches__content">
+    <section class="branches">
+      <h2 class="branches__title abonnement__title title">Наши филиалы</h2>
+      <div class="hero__icon branches__icon">
+        <img src="img/hero/soccerball.svg" alt="">
+      </div>
+      <div class="container__contacts ">
+        
+        <div class="branches__content content">
           <div class="buttons content__buttons">
             <button class="map-link" data-map="QSI" ><span class="map-link_bold">QSI</span><br>ул. Баян Сулу, 15</button>
             <button class="map-link" data-map="Дворец «Жастар»" ><span class="map-link_bold">Дворец «Жастар»</span><br>проспект Республики, 34</button>
             <button class="map-link" data-map="Тарлан АРЕНА"><span class="map-link_bold">Тарлан АРЕНА</span><br>ул. Г. Алиева с пересечением Тауелсыздык</button>
             <button class="map-link" data-map="Ташенова 16А"><span class="map-link_bold">Ташенова 16А</span><br>улицаТашенова 16А</button>
           </div>
-          <div  id="map" class="map brunches__map">
+          <div  id="map" class="map branches__map">
             
           </div >
         </div>
-        <!-- /.filial -->
+        <!-- /.branches__content content-->
       </div>
+      <!-- branches -->
     </section>
     </main>
-    <footer class="footer">
-    <!-- /.branches -->
-    <div class="container">
+  <footer class="footer">
+  
+    <div class="container__contacts">
       <div class="menu footer__menu">
         <div class="logo menu__logo">
-          <a class="logo__image" href="index.html"><img src="img/header/logo.png" alt=""></a>
-          <ul class="logo__city">
-            <li class="logo__item"><a href="#">Астана</a></li>
-          </ul>
+          <a class="logo__image footer_logo__image" href="index.html"><img src="img/footer/logo.png" alt=""></a>
+          <div class="logo__drodown dropdown">
+            <ul class="logo__city logo__city_footer">
+              <li class="logo__item">Астана <img src="img/header/arrow.svg" alt=""></li>
+              <li class="logo__item">Астана</li>
+            </ul>
+          </div>
         </div>
-        <nav class="nav menu__nav">
-          <a href="#" class="nav__item">О нас</a>
+        <nav class="nav menu__nav footer__nav">
+          <a href="contacts.html" class="nav__item">О нас</a>
           <a href="#" class="nav__item">Статистика</a>
           <a href="#" class="nav__item">Новости</a>
           <a href="#" class="nav__item nav__item">Контакты</a>
         </nav>
         <div class="contacts menu__contacts">
-          <a class="contacts__phone" href="+7(702)440-70-07"><span class="contacts__phone_primary">+7(702)</span>440-70-07</a>
-          <button class="contacts__button button button_primary">Перезвоните мне</button>
+          <a class="contacts__phone" href="+7(702)440-70-07"><span
+              class="contacts__phone_primary">+7(702)</span>440-70-07</a>
+          <button class="contacts__button button button_primary" data-toggle="modal">Перезвоните мне</button>
+        </div>
+      </div>
+      <div class="footer__contacts">
+        <span class="footer__rights">© www.pro-football.kz 2008-2015. Все права защищены.</span>
+        <div class="footer__logo">
+          <span class="footer__text">Сделано в:</span>
+          <div class="footer__image">
+            <img src="img/footer/footer-logo.png" alt="">
+          </div>
         </div>
       </div>
     </div>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  
-  <script>
-   
-
+  <div class="modal">
+    <div class="modal__dialog">
+      <button class="modal__close"></button>
+      <h3 class="modal__title">Обратный звонок</h3>
+      <form action="send.php" method="POST" class="form modal__form">
+        <div class="input-group modal__input-group">
+          <label for="modal-user-name" class="label form__label label_light"></label>
+          <input type="text" name="userName" id="modal-user-name" class="input form__input modal__input input_light"
+            placeholder="Как вас зовут:">
+        </div>
+        <div class="input-group modal__input-group">
+          <label for="modal-user-phone" class="label form__label label_light"></label>
+          <input type="tel" name="userPhone" class="input form__input modal__input input_light" id="modal-user-phone"
+            placeholder="Ваш номер телефона:">
+        </div>
       
-  </script>
-  <script src="js/main.js"></script>
+        <button class="button button_primary modal__button">Перезвоните мне</button>
+      </form>
+      <!-- /.form modal__form -->
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+  <div class="window">
+    <div class="window__dialog">
+      <button class="window__close"></button>
+      <h3 class="window__title">Спасибо за заявку</h3>
+      <h4 class="window__subtitle">Наш менеджер перезвонит вам в течение 15 минут</h4>
+      <a class="window__link window__button button_primary" href="https://vk.com/glo_academy">Подписаться на нас в
+        соцсетях</a>
+  
+    </div>
+    <!-- /.window__dialog -->
+  </div>
+  <!-- /.window -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

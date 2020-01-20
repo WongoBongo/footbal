@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Дипломный проект</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="menu">
+        <div class="logo menu__logo">
+          <a class="logo__image" href="index.html"><img src="img/header/logo.png" alt=""></a>
+          <div class="logo__drodown dropdown">
+            <ul class="logo__city">
+              <li class="logo__item">Астана <img src="img/header/arrow.svg" alt=""></li>
+        
+              <li class="logo__item">Астана</li>
+            </ul>
+          </div>
+        </div>
+        <nav class="nav menu__nav">
+          <a href="index.html" class="nav__item">О нас</a>
+          <a href="statistics-child.html" class="nav__item">Статистика</a>
+          <a href="news.html" class="nav__item">Новости</a>
+          <a href="contacts.html" class="nav__item nav__item">Контакты</a>
+        </nav>
+        <div class="contacts menu__contacts">
+          <a  class="contacts__phone" href="+7(702)440-70-07"><span class="contacts__phone_primary">+7(702)</span>440-70-07</a>
+          <button class="contacts__button button button_primary" data-toggle="modal" >Перезвоните мне</button>
+        </div>
+      </div>
+      <!-- menu -->
+      
+    </div>
+    <!-- container -->
+  </header>
+  <main class="main">
+    <section class="link">
+     <div class="container">
+        <div class="link__block">
+          <span class="link__text"><a href="index.html">Главная</a><img src="img/contacts/contacts-icon.png" alt=""><a class="link__text_active" href="contacts.html"> Контакты</a></span>
+        </div>
+     </div>
+    </section>
+    <section class="branches branches-contacts">
+      <h2 class="branches__title branches__title_contacts  title">Контакты</h2>
+      
+      <div class="container container__contacts">
+        <div class="buttons content__buttons content__buttons_contacts">
+          <button class="map-link map-link_contacts" data-map="QSI"><span class="map-link_bold">QSI</span></button>
+          <button class="map-link map-link_contacts" data-map="Дворец «Жастар»"><span class="map-link_bold">Дворец «Жастар»</span></button>
+          <button class="map-link map-link_contacts" data-map="Тарлан АРЕНА"><span class="map-link_bold">Тарлан АРЕНА</span></button>
+          <button class="map-link map-link_contacts" data-map="Ташенова 16А"><span class="map-link_bold">Ташенова 16А</span></button>
+        </div>
+        <div class="branches__contacts">
+          <div class="branches__col branches__col_place">
+            
+            <span class="branches__item branches__item_place"><img src="img//contacts/map.png" alt=""> 606020, Россия, Нижегородская обл., г. Дзержинск,
+            ул. Либкнехта, д. 41, копр.2</span>
+          </div>
+          <div class="branches__col branches__col_phone">
+            <span class="branches__item"><img src="img//contacts/phone.png" alt="">+7 831 280-84-47</span>
+
+            <span class="branches__item"><img src="img//contacts/email.png" alt=""><a href="#">info@melsytech.com</a></span>
+            </div>
+          </div>
+        
+        <div class="branches__content branches__content_contacts content">
+          
+          <div  id="map" class="map map_contacts brunches__map brunches__map_contacts">
+            
+          </div >
+        </div>
+        <!-- /.branches__content content-->
+        
+      </div>
+      <!-- branches -->
+    </section>
+    <section class="question">
+      <div class="container__contacts">
+        <h2 class="question_title branches__title branches__title_contacts_question  title">Остались вопросы?</h2>
+        <div class="questions__form">
+        <form action="send.php" method="POST" class="form question__form">
+          <div class="form_group">
+            <div class="column">
+              <div class="input-group question__input-group">
+                <label for="question-user-name" class="label form__label label_light"></label>
+                <input type="text" id="question-user-name" name="userName" class="input form__input question__input input_light"
+                  placeholder="Ваше имя:">
+              </div>
+              <div class="input-group question__input-group">
+                <label for="question-user-phone" class="label form__label label_light"></label>
+                <input type="tel" name="userPhone" class="input form__input question__input input_light" id="question-user-phone"
+                  placeholder="Ваш номер телефона:">
+              </div>
+              <div class="input-group question__input-group">
+                <label for="question-user-email" class="label form__label label_light"></label>
+                <input type="email" name="userEmail" class="input form__input question__input input_light" id="question-user-email"
+                  placeholder="Email">
+              </div>
+            </div>
+            
+            <div class="column_full">
+              <div class="input-group question__input-group question__input-group column__full-width">
+                <label for="question-user-question" class="label form__label label_light"></label>
+                <input type="text" name="userQuestion" class="input form__input question__input input_light" id="question-user-question"
+                  placeholder="Сообщение:">
+              </div>
+              <div class="policy question__policy">
+              <input type="checkbox" name="policy" id="modal-policy-checkbox" class="policy__checkbox" checked>
+              <label for="modal-policy-checkbox" class="policy__label">I'm not a robot <img class="recaptcha" src="img/contacts/RecaptchaLogo.svg.png" alt=""></label>
+              <button class="button button_primary  question__button">Отправить</button>
+              </div>
+              
+            </div>
+            <!-- /.policy -->
+          </div>
+          
+        </form>
+        
+        </div>
+      </div>
+    </section>
+    </main>
+    <footer class="footer">
+   
+    <div class="container container__contacts">
+      <div class="menu footer__menu">
+        <div class="logo menu__logo">
+        <a class="logo__image footer_logo__image" href="index.html"><img src="img/footer/logo.png" alt=""></a>
+        <div class="logo__drodown dropdown">
+          <ul class="logo__city logo__city_footer">
+            <li class="logo__item">Астана <img src="img/header/arrow.svg" alt=""></li>
+            <li class="logo__item">Астана</li>
+          </ul>
+        </div>
+        </div>
+        <nav class="nav menu__nav">
+          <a href="#" class="nav__item">О нас</a>
+          <a href="#" class="nav__item">Статистика</a>
+          <a href="#" class="nav__item">Новости</a>
+          <a href="#" class="nav__item nav__item">Контакты</a>
+        </nav>
+        <div class="contacts menu__contacts">
+          <a class="contacts__phone" href="+7(702)440-70-07"><span class="contacts__phone_primary">+7(702)</span>440-70-07</a>
+          <button class="contacts__button button button_primary" data-toggle="modal">Перезвоните мне</button>
+        </div>
+      </div>
+      <div class="footer__contacts">
+        <span class="footer__rights">© www.pro-football.kz 2008-2015. Все права защищены.</span>
+        <div class="footer__logo">
+          <span class="footer__text">Сделано в:</span>
+          <div class="footer__image">
+            <img src="img/footer/footer-logo.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="modal">
+    <div class="modal__dialog">
+      <button class="modal__close"></button>
+      <h3 class="modal__title">Обратный звонок</h3>
+      <form action="send.php" method="POST" class="form modal__form">
+        <div class="input-group modal__input-group">
+          <label for="modal-user-name" class="label form__label label_light"></label>
+          <input type="text" name="userName" id="modal-user-name" class="input form__input modal__input input_light"
+            placeholder="Как вас зовут:">
+        </div>
+        <div class="input-group modal__input-group">
+          <label for="modal-user-phone" class="label form__label label_light"></label>
+          <input type="tel" name="userPhone" class="input form__input modal__input input_light" id="modal-user-phone"
+            placeholder="Ваш номер телефона:">
+        </div>
+      
+        <button class="button button_primary modal__button">Перезвоните мне</button>
+      </form>
+      <!-- /.form modal__form -->
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+  <div class="window">
+    <div class="window__dialog">
+      <button class="window__close"></button>
+      <h3 class="window__title">Спасибо за заявку</h3>
+      <h4 class="window__subtitle">Наш менеджер перезвонит вам в течение 15 минут</h4>
+      <a class="window__link window__button button_primary" href="https://vk.com/glo_academy">Подписаться на нас в
+        соцсетях</a>
+  
+    </div>
+    <!-- /.window__dialog -->
+  </div>
+  <!-- /.window -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

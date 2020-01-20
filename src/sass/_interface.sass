@@ -15,8 +15,109 @@
 button,img 
   outline: none
 .input
+  position: relative
   border: none
   outline: none
-  padding: 16px 0px 17px 25px
-  border-radius: 25px
+  padding: 16px 0px 17px 25px!important
+  border-radius: 25px!important
   width: 290px
+  height: 55px
+  &-group
+    
+
+.label
+  
+  font-size: 1.07rem
+  &_light
+    color: rgba($light, 0.5);
+  &_dark
+    color: rgba($dark, 0.5) 
+  &_light
+    &::placeholder
+      color: $light
+      font-weight: 500
+  &_dark
+    &::placeholder
+      color: $dark
+      font-size: 18px;
+      line-height: 24px;
+.invalid 
+  color: $light; 
+  position: absolute!important
+  background: tomato
+  margin-top: -2.5rem;
+  margin-left: 4rem
+  padding: 10px 10px 13px 10px;
+  border-radius: 0
+  
+  background: url('../img/modal/invalid-bg.svg') 
+    
+  
+  
+  
+ 
+  
+.policy
+  position: relative
+
+  &__checkbox
+    position: relative
+    opacity: 0
+    visibility: hidden
+    &:checked +
+      .policy__label
+        &::before
+          position: relative
+          background: $primary url('../img/check.svg') no-repeat center / 0.8rem
+  &__label
+    position: relative
+    display: flex
+    align-items: center
+    font-size: 1.142rem
+    &::before
+      content: ''
+      height: 25px
+      width: 25px
+      border: 1px solid #ededed
+      border-radius: 2px
+      margin-right: 0.64rem
+      cursor: pointer
+    &_center
+      justify-content: center     
+    
+  
+input
+  background: $light!important
+  border: none!important
+  
+  
+  &.invalid
+    position: relative!important
+    border-bottom: 1px solid tomato;
+    margin: 0
+    
+
+
+.recaptcha
+  width: 50px
+  height: 50px
+.question__policy
+  display: flex
+  max-width: 600px
+  margin-left: auto
+  margin-top: 10px
+.policy__label
+  margin-right: 26px
+  padding:
+  border: 1px solid #ededed
+  font-family: Roboto
+  font-weight: 700px
+.question__button
+  padding: 
+
+#header-user-phone-error,#header-user-name-error
+  margin-top: -6.5rem!important
+#question-user-name-error,#question-user-email-error,#question-user-phone-error
+  margin-top: -6.5rem!important
+#question-user-question-error
+  margin-top: -14rem!important
