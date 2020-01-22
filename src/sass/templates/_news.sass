@@ -4,22 +4,19 @@
   &__board
     height: 1760px
     overflow: hidden
-   
+    
+    
     &__column
-      width: 1140px
-      overflow: visible
-      height: 1206px
-      display: flex
-      flex-wrap: nowrap
-      flex-direction: column
+      
+     
   &__block
     
     display: flex
-    align-items: flex-start
+    
     margin-top: 26px
     margin-bottom: 26px
     margin-right: 10px
-
+    
    
     
     &__column
@@ -32,6 +29,10 @@
   &__image
     margin-left: 5px
     margin-right: 32px
+    img
+      min-width: 202px
+      min-height: 153px
+      
   &__title
     margin-top: 5px
     margin-bottom: 10px
@@ -63,8 +64,8 @@
     font-family: "Roboto-Light";
     font-weight: 300;
     font-size: 14px
-
-   
+    max-height: 164px
+    overflow: hidden
     
     &__column 
       max-width: 265px
@@ -80,8 +81,30 @@
   display: flex
   align-items: flex-end
   justify-content: space-between
+.newrow,.newcolumn
+  &:focus
+    background: $blue
 
 .news__board__column
 .news__block__column
 .news__title__column
 .news__text__column
+.grid
+  display: grid
+  grid-template-columns: 470px 470px      
+  max-width: 960px
+  height: auto
+  margin: auto
+   
+   
+.text
+  text-align: left
+  max-width: 265px
+  height: 124px
+  overflow: hidden
+.newcolumn,.newrow
+  cursor: pointer
+  &:hover
+    border: 1px solid $dark
+    background: rgba($dark, 0.5)
+ 

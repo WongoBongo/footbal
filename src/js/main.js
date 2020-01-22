@@ -1,18 +1,42 @@
 $(document).ready(function () {
   var modal = $('.modal'),
+      groupmodal = $('.modalgroup'),
+      abonomentmodal = $('.modalabonoment'),
     modalBtn = $('[data-toggle=modal]'),
+    modalBtnAbonement = $('[data-toggle=modalabonoment]'),
+    modalBtnGroup = $('[data-toggle=modalgroup]'),
     closeBtn = $('.modal__close'),
+    closeBtnAbonement = $('.modalabonoment__close'),
+    closeBtnGroup = $('.modalgroup__close'),
     windowModal = $('.window'),
     closeWBtn = $('.window__close'),
+    text = $('.news__text'),
+    column = $('.news__board'),
+    columnbtn = $('.newcolumn'),
     modalRemove = function () {
       modal.toggleClass('modal_visible');
     };
-
+  columnbtn.on('click', function (e) {
+    column.toggleClass('grid');
+    text.toggleClass('.text');
+  });
+  modalBtnAbonement.on('click', function (e) {
+    abonomentmodal.toggleClass('modalabonoment_visible');
+  });
+  modalBtnGroup.on('click', function (e) {
+     groupmodal.toggleClass('modalgroup_visible');
+  });
   modalBtn.on('click', function (e) {
     modal.toggleClass('modal_visible');
   });
   closeBtn.on('click', function (e) {
     modal.toggleClass('modal_visible');
+  });
+  closeBtnAbonement.on('click', function (e) {
+    abonomentmodal.toggleClass('modalabonoment_visible');
+  });
+  closeBtnGroup.on('click', function (e) {
+     groupmodal.toggleClass('modalgroup_visible');
   });
   closeWBtn.on('click', function (e) {
     windowModal.toggleClass('window_visible');
@@ -72,10 +96,52 @@ $(document).ready(function () {
             iconImageSize: [30, 30],
             iconImageOffset: [-50, -50],
           });
+          var mytwoPlacemark = new ymaps.Placemark(destinations['Дворец «Жастар»'], {
 
+          }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map.svg',
+            iconImageSize: [30, 30],
+            iconImageOffset: [-50, -50],
+          });
+          var mythreePlacemark = new ymaps.Placemark(destinations['Тарлан АРЕНА'], {
 
-          myMap.geoObjects
-            .add(myPlacemark);
+          }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map.svg',
+            iconImageSize: [30, 30],
+            iconImageOffset: [-50, -50],
+          });
+          var myfourPlacemark = new ymaps.Placemark(destinations['Ташенова 16А'], {
+
+          }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/map.svg',
+            iconImageSize: [30, 30],
+            iconImageOffset: [-50, -50],
+          });
+
+           myMap.behaviors
+             // Отключаем часть включенных по умолчанию поведений:
+             //  - drag - перемещение карты при нажатой левой кнопки мыши;
+             //  - magnifier.rightButton - увеличение области, выделенной правой кнопкой мыши.
+             .disable(['rightMouseButtonMagnifier', 'scrollZoom'])
+             // Включаем линейку.
+             .enable('ruler');
+
+           // Изменяем свойство поведения с помощью опции:
+           // изменение масштаба колесом прокрутки будет происходить медленно,
+           // на 1/2 уровня масштабирования в секунду.
+           myMap.options.set('scrollZoomSpeed', 0.5);
+           myMap.geoObjects
+             .add(myPlacemark);
+            myMap.geoObjects
+             .add(mytwoPlacemark);
+            myMap.geoObjects
+              .add(mythreePlacemark);
+            myMap.geoObjects
+              .add(myfourPlacemark);
+            
         });
       }, 1500)
     }
@@ -114,17 +180,17 @@ $(document).ready(function () {
         required: "подтвердите обработку данных",
       },
       userName: {
-        required: "Заполните поле",
-        minlength: "Имя не короче двух букв",
-        maxlength: "Имя не больше 15 букв"
+        required: "Ваше имя",
+        minlength: "Ваше имя",
+        maxlength: "Ваше имя"
       },
       userPhone: {
         required: "Неправильный номер",
-        minlength: " Введите телефон корректно",
+        minlength: "Неправильный номер",
       },
       userEmail: {
-        required: "Заполните поле",
-        email: "Введите корректный email"
+        required: "Введите email",
+        email: "Введите email"
       }
     },
 
@@ -137,6 +203,126 @@ $(document).ready(function () {
         success: function (response) {
           $(form)[0].reset();
           modal.removeClass('modal_visible');
+          windowModal.toggleClass('window_visible');
+          ym('65028103', 'reachGoal', 'form');
+          return true;
+        }
+      });
+    },
+
+  });
+  $('.modalabonoment__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      policy: {
+        required: true,
+      },
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        minlength: 10,
+
+      },
+      // правило-объект
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, // сообщения
+    errorElement: "div",
+    messages: {
+      policy: {
+        required: "подтвердите обработку данных",
+      },
+      userName: {
+        required: "Ваше имя",
+        minlength: "Ваше имя",
+        maxlength: "Ваше имя"
+      },
+      userPhone: {
+        required: "Неправильный номер",
+        minlength: "Неправильный номер",
+      },
+      userEmail: {
+        required: "Введите email",
+        email: "Введите email"
+      }
+    },
+
+
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          abonomentmodal.removeClass('modalabonoment_visible');
+          windowModal.toggleClass('window_visible');
+          ym('65028103', 'reachGoal', 'form');
+          return true;
+        }
+      });
+    },
+
+  });
+  $('.modalgroup__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      policy: {
+        required: true,
+      },
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: {
+        required: true,
+        minlength: 10,
+
+      },
+      // правило-объект
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, // сообщения
+    errorElement: "div",
+    messages: {
+      policy: {
+        required: "подтвердите обработку данных",
+      },
+      userName: {
+        required: "Ваше имя",
+        minlength: "Ваше имя",
+        maxlength: "Ваше имя"
+      },
+      userPhone: {
+        required: "Неправильный номер",
+        minlength: "Неправильный номер",
+      },
+      userEmail: {
+        required: "Введите email",
+        email: "Введите email"
+      }
+    },
+
+
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          groupmodal.removeClass('modalgroup_visible');
           windowModal.toggleClass('window_visible');
           ym('65028103', 'reachGoal', 'form');
           return true;
@@ -174,13 +360,13 @@ $(document).ready(function () {
         required: "подтвердите обработку данных",
       },
       userName: {
-        required: "Заполните поле",
-        minlength: "Имя не короче двух букв",
-        maxlength: "Имя не больше 15 букв"
+        required: "Ваше имя",
+        minlength: "Ваше имя",
+        maxlength: "Ваше имя"
       },
       userPhone: {
         required: "Неправильный номер",
-        minlength: " Введите телефон корректно",
+        minlength: "Неправильный номер",
       },
 
     },
@@ -238,22 +424,22 @@ $(document).ready(function () {
         required: "галочка",
       },
       userName: {
-        required: "Заполните поле",
-        minlength: "Имя не короче двух букв",
-        maxlength: "Имя не больше 15 букв"
+        required: "Ваше имя",
+        minlength: "Ваше имя",
+        maxlength: "Ваше имя"
       },
       userPhone: {
-        required: "Заполните поле",
-        minlength: " Введите телефон корректно",
+        required: "Ваш телефон",
+        minlength: "Ваш телефон",
       },
        userEmail: {
-         required: "Заполните поле",
+         required: "Введите email",
          email: "Введите email"
        },
       userQuestion: {
-        required: "Заполните поле",
-        minlength: "Не короче 5 букв",
-        maxlength: "Не больше 40 букв"
+        required: "Ваш вопрос",
+        minlength: "Ваш вопрос",
+        maxlength: "Ваш вопрос"
       }
     },
     errorPlacement: function (error, element) {
@@ -296,4 +482,8 @@ buttonlist.addEventListener('click', function () {
 const buttonfooter = document.querySelector('.logo__city_footer');
 buttonfooter.addEventListener('click', function () {
   buttonfooter.classList.toggle('show')
+});
+
+$(".button-burger").click(function () {
+  $(this).closest("body").toggleClass("active");
 });

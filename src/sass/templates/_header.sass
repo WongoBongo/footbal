@@ -63,8 +63,14 @@
   margin-bottom: 3px;
   margin-right: 52px;
   margin-left: 150px;
+  &__list
+    display: flex
+    flex-direction: row
+    padding: 0 
+   
   &__item
     margin-right: 1.3rem
+    padding: 0
     padding-right: 1.08rem
     text-decoration: none
     color: $light
@@ -73,6 +79,8 @@
     font-size: 15px;
     font-weight: 300;
     line-height: 24px;
+    list-style: none
+    
     &:hover
       color: $primary
       text-decoration: underline
@@ -90,7 +98,9 @@
     position: absolute
     margin-left: 2.3rem
     padding: 0
-    height: 50px
+    height: 45px
+    cursor: pointer
+    
     overflow: hidden
     background: none;
     border: 1px solid #fff;
@@ -101,8 +111,10 @@
     cursor: pointer;
     outline: none
     list-style: none;
+    &:hover
+      background: rgba($dark,0.3 )
     &_footer
-      top: 10px
+      top: 0px
     li
       display: flex
       align-items: center
@@ -121,6 +133,8 @@
     
 .dropdown
   position: relative 
+  margin-top: 5px
+
 .show
   overflow: visible
   border-radius: 15px
@@ -139,6 +153,7 @@
     &:hover
       border-bottom: 1px solid $primary
     &_primary
+      font-weight: 300
       color: $primary
   &__button
     font-size: 12px;
@@ -183,3 +198,203 @@
         border: 1px solid $primary
 
 
+
+%line
+  background: white;
+  width: 30px;
+  height: 3px;
+ 
+
+// Animate the top bar on hover
+@keyframes burger-hover-top-over  
+  0%  
+    transform: translateY(0);
+   
+  50% 
+    transform: translateY(8px);
+   
+  100% 
+    transform: translateY(0);
+   
+ 
+
+// Animate the bottom bar on hover
+@keyframes burger-hover-bottom-over  
+  0%  
+    transform: translateY(0);
+   
+  50% 
+    transform: translateY(-8px);
+   
+  100% 
+    transform: translateY(0);
+   
+ 
+
+// Animate the top bar on hover-OUT
+@keyframes burger-load-state-top 
+  0%  
+    transform: translateY(0);
+   
+  50% 
+    transform: translateY(8px);
+   
+  100% 
+    transform: translateY(0);
+   
+ 
+
+// Animate the bottom bar on hover-OUT
+@keyframes burger-load-state-bottom 
+  0%  
+    transform: translateY(0);
+   
+  50% 
+    transform: translateY(-8px);
+   
+  100% 
+    transform: translateY(0);
+   
+ 
+
+
+//Slide that sub-burger in
+@keyframes burger-active-slide  
+  0%  
+    transform: translateX(-10px);
+   
+  100% 
+    transform: translateX(0);
+   
+ 
+
+//Rotate that top bar on active
+@keyframes top-rot-in  
+  0%  
+    transform: rotate(0deg);
+    transform-origin: left;
+   
+  100%  
+    transform: rotate(45deg);
+    transform-origin: left;
+ 
+   
+ 
+//Rotate that bottom bar on active
+@keyframes bot-rot-in  
+  0%  
+    transform: rotate(0deg);
+    transform-origin: left;
+   
+  100%  
+    transform: rotate(-45deg);
+    transform-origin: left;
+ 
+   
+ 
+
+
+ 
+
+.button-burger 
+  padding: 10px
+  height: 30px
+  width: 30px
+  display: block
+  position: relative
+ 
+ 
+
+.burger 
+  @extend %line;
+  position: absolute;
+  top: 24px;
+  &:before 
+    @extend %line;
+    content: '';
+    position: absolute;
+    top: -8px;
+    animation:  burger-load-state-top .5s;
+   
+  &:after 
+    @extend %line;
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    animation:  burger-load-state-bottom .5s;
+   
+  b 
+    opacity: 0;
+    top: -13px;
+    left: 2px;
+    font-size: .55em;
+    line-height: 1em;
+    position: relative;
+    transition: all 0.15s 0.15s ease-in;
+    transition-delay: 0.5s;
+   
+ 
+
+.burger
+  &:before 
+    animation: burger-hover-top-over .5s .5s forwards;
+   
+  &:after 
+    animation: burger-hover-bottom-over .5s .5s forwards;
+   
+  b 
+    opacity: 1;
+   
+ 
+
+///Lets make a sub-
+
+.sub-burger 
+  font-weight: 300;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 10px 20px;
+  width: 120px;
+  background: #001e8e; 
+  background: linear-gradient(to bottom,  #33b7d2 0%,#ffd801 100%); 
+  margin: 0;
+  position: fixed;
+  top: 80px;
+  left: 110px;
+  transition: opacity 0.25s ease;
+  opacity: 0;
+  li 
+    line-height: 20px;
+    border-bottom: 1px solid white;
+   
+  li:last-child 
+    border-bottom: none;
+   
+ 
+
+.active 
+  .burger 
+    background: transparent;
+    &:before 
+      top: -10px;
+      left: 5px;
+      animation: top-rot-in .5s forwards;
+     
+    &:after 
+      top: 10px;
+      left: 5px;
+      animation: bot-rot-in .5s forwards;
+     
+    b 
+      opacity: 0;
+      transition: all 0.10s 0 ease-out;
+         
+   
+  .sub-burger 
+    opacity: 1;
+    transition: opacity 0.25s ease;
+    animation: burger-active-slide .25s;
+   
+.button-burger
+  display: none

@@ -68,6 +68,8 @@ button,img
       .policy__label
         &::before
           position: relative
+          height: 25px
+          min-width: 25px
           background: $primary url('../img/check.svg') no-repeat center / 0.8rem
   &__label
     position: relative
@@ -88,6 +90,7 @@ button,img
   
 input
   background: $light!important
+  color: #606060!important
   border: none!important
   
   
@@ -95,7 +98,7 @@ input
     position: relative!important
     border-bottom: 1px solid tomato;
     margin: 0
-    
+    padding: 20px -10px 20px 40px!important;
 
 
 .recaptcha
@@ -118,6 +121,7 @@ input
 #header-user-phone-error,#header-user-name-error
   margin-top: -6.5rem!important
 #question-user-name-error,#question-user-email-error,#question-user-phone-error
-  margin-top: -6.5rem!important
+  margin-top: -5rem!important
+  margin-left: 4rem!important
 #question-user-question-error
   margin-top: -14rem!important

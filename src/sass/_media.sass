@@ -7,7 +7,7 @@
     margin-left: 130px
     &__item
       margin-right: 0.3rem
-      padding-right: 0.54rem
+      padding-right: 0.3rem
 
   .contacts
     &__phone
@@ -18,25 +18,51 @@
       margin-left: 1rem
 
 @media screen and ( max-width: 992px )
+  .button-burger
+    display: block
   .nav
     display: none
+    position: relative
+    &__list
+    
 
   .header
     
     &__title
+      margin-top: 110px
       font-size: 48px
     &__subtitle
       font-size: 24px
     &__input-group
       margin-right: 0
+    &__button
+      width: 100%
+      max-width: 290px
     .form
       max-width: 500px
     .social__title
       font-size: 14px
+
+  .contacts__phone
+    margin-right: 3px
+  
   .logo
+    position: relative
+    &__dropdown
+      margin-top: 18px
+      position: relative
+   
     &__city
-      top: 0
-      margin-left: 0.5rem
+      display: none
+      top: -10px
+      margin-left: 3px
+      &_footer
+        top: 0
+        
+
+      li
+        padding: 9px 9px 11px 10px;
+   
     &__image
         width: 81px
         height: 81px
@@ -56,6 +82,9 @@
   .contacts
     &__button
       display: none
+    &__phone
+      margin-right: 0
+      font-size: 18px
   
 
 
@@ -65,13 +94,16 @@
       font-size: 24px
     &__subtitle
       font-size: 16px
+    &__input
+      width: 280px
   .social__title
     display: block
     max-width: 150px
     margin: auto
   .form
     &__button
-      padding: 20px 30px
+      max-width: 280px
+      
   .block
     &__item
   .subscription
@@ -95,7 +127,8 @@
     &__item
       margin-bottom: 3rem
 
-  
+  #question-user-question
+    width: 600px
 
 
 @media screen and ( max-width: 992px )
@@ -118,14 +151,39 @@
     flex-direction: column
     &__item
       margin-bottom: 2rem
+      &:nth-child(1)
+        margin: auto
     &__text
       text-align: center
       &_bold
         text-align: center
+  .grid
+    grid-template-columns: 300px 300px
+    max-width: 650px
+    margin: auto
+  .branches__title_contacts_question
+    text-align: center
+    margin-right: 30px
+    &::after
+      left: 33%;
+      width: 34%;
+  .column
+    margin-right: 0
+  .question
+    &__title
+      
 
-
+    &__form
+      max-width: 350px
+      margin: 0 auto
 
 @media screen and ( max-width: 600px )
+
+  
+  .question__policy
+   
+    
+    
   .hero
     &__title
       
@@ -205,9 +263,11 @@
       margin: 3rem auto
       &_contacts
         flex-wrap: wrap
+  .form_group
+    flex-wrap: wrap
+    
   #question-user-question
-    width: 400px
-    margin-left: 0
+    width: 100%
   .column__full-width
     margin-left: 0
 
@@ -220,22 +280,55 @@
     &__child
   .child
     &__list
-      flex-direction: column
+      flex-direction: row
+      flex-wrap: nowrap
+    &__name
+      padding: 20px
   thead
     display: none
   .achievements
     &__title
       padding-left: 0
-
+    tr
+      border: 1px dotted #E4E4E4
     td
       display: block
       padding-left: 50%
+      position: relative
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        height: 100%
+        width: 2px;
+        left: 190px;
+        top: 0;
+        background-color: $blue
+
+      &:nth-child(1)
+        width: auto!important
+      &:nth-child(2)
+        width: auto!important
+      &:nth-child(3)
+        width: auto!important
+      &:nth-child(4)
+        width: auto!important  
       &:nth-child(5)
+        width: auto!important
         padding-right: 0
+        
+      &:nth-child(6)
+        width: auto
+        display: block
+        border: none
+        &::after
+          display: none
+
       &::before
         content: attr(data-label)
         position: absolute
         left: 2%
+        
   .news
     &__block
       flex-wrap: wrap
@@ -252,14 +345,25 @@
       
   .achievements
     tr
-      border-bottom: 80px solid #fff
+      border: 1px dotted #E4E4E4
+      
     td
       display: block
       padding-left: 0
       text-align: center
-      border-bottom: none
+      &:last-child
+        border: none
       
-      border-top: none
+      
+      
+      &:nth-child(1)
+        padding-top: 0
+      &:nth-child(6)
+        background-color: #fff
+        &::before
+          background-color: #fff
+      &::after
+        display: none
       &::before
         display: block
         position: static
@@ -275,6 +379,7 @@
   .news
     &__image
       margin: auto
+   
 @media screen and ( max-width: 992px )
   .page
     &__image_two
@@ -289,6 +394,14 @@
 
           margin-right: 0 
           margin-bottom: 42px  
+@media screen and ( max-width: 380px )
+  .question
+    &__input
+      width: 250px
+  #question-user-question
+   
+  .policy__label
+    
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
   .hero
@@ -304,3 +417,10 @@
     margin-left: 50px
   .form_group
     flex-wrap: nowrap
+  .block__age
+    margin-left: 45px
+  .block__button
+    max-width: 140px
+    margin-left: 110px
+  .question__policy
+    margin-left: 400px

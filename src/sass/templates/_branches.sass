@@ -155,23 +155,38 @@
     &_bold
       font-size: 20px;
       font-weight: 700;
+    &_active
+       &:focus
+        border: none
+        background: url('../img/footer/hover.svg') no-repeat center / cover
+        height: 89px
+        width: 263px
     &_contacts
+      position: relative
+      width: 263px
+      height: 89px
+      text-align: left
+      padding: 18px 19px
+      border: 1px solid #28b4d0;
+      background-color: #fff
+      margin-bottom: 1rem
+      font-family: Roboto;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 22px;
       margin-right: 2.2rem
       padding: 35px 15px
       width: 263px
       text-align: center
+      &:focus
+        background-color: $primary
       &:last-child
         margin-right: 0
       
       &:hover
+        
         background: $primary
-    &:active
-      
-      border: none
-     
-      background: url('../img/footer/hover.svg') no-repeat center / cover
-      
-      width: 263px
+   
  
     
       
@@ -224,8 +239,10 @@
   justify-content: flex-start
 .form_group
   display: flex
-  
+.policy__label
+  padding: 0 10px 
 #question-user-question
+  
   padding-left: 10px;
   padding-top: 20px
   height: 171px
@@ -238,7 +255,7 @@
 .column__full-width
   margin-left: 20px
 .question
-  padding: 45px
+  padding-bottom: 45px
   padding-top: 24px;
  
   &__input
@@ -250,3 +267,7 @@
   &__button
     margin-top: 0
     margin-right: 3px
+    padding: 12px 23px;
+
+
+  

@@ -4,17 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Дипломный проект</title>
+  <title>Академия Футбола</title>
+  <link rel="SHORTCUT ICON" href="img/header/logo.png" type="image/png">
   <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <script>
+    (function (m, e, t, r, i, k, a) {
+    m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(57123685, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/57123685" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+
   <header class="header">
     <div class="container">
       <div class="menu">
         <div class="logo menu__logo">
           <a class="logo__image" href="index.html"><img src="img/header/logo.png" alt=""></a>
-          <div class="logo__drodown dropdown">
+          <div class="logo__dropdown dropdown">
+
+            <span class="button-burger">
+              <span class="burger">
+                <b></b>
+              </span>
+            </span>
+            
+            <ul class="sub-burger">
+              <li><a href="index.html" class="nav__item">О нас</a></li>
+              <li><a href="statistics-child.html" class="nav__item">Статистика</a></li>
+              <li><a href="news.html" class="nav__item">Новости</a></li>
+              <li><a href="contacts.html" class="nav__item nav__item">Контакты</a></li>
+            </ul>
             <ul class="logo__city">
               <li class="logo__item">Астана <img src="img/header/arrow.svg" alt=""></li>
                 
@@ -22,16 +55,21 @@
             </ul>
           </div>
         </div>
+        
         <nav class="nav menu__nav">
-          <a href="index.html" class="nav__item">О нас</a>
-          <a href="statistics-child.html" class="nav__item">Статистика</a>
-          <a href="news.html" class="nav__item">Новости</a>
-          <a href="contacts.html" class="nav__item nav__item">Контакты</a>
+          <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__item">О нас</a></li>
+            <li class="nav__item"><a href="statistics-child.html" class="nav__item">Статистика</a></li>
+            <li class="nav__item"><a href="news.html" class="nav__item">Новости</a></li>
+            <li class="nav__item"><a href="contacts.html" class="nav__item nav__item">Контакты</a></li>
+          </ul>
+      
         </nav>
         <div class="contacts menu__contacts">
-          <a  class="contacts__phone" href="+7(702)440-70-07"><span class="contacts__phone_primary">+7(702)</span>440-70-07</a>
+          <a  class="contacts__phone" href="tel:+7(702)440-70-07"><span class="contacts__phone_primary">+7 702</span> 440 70 07</a>
           <button class="contacts__button button button_primary" data-toggle="modal" >Перезвоните мне</button>
         </div>
+        
       </div>
       <!-- menu -->
       <div class="header__content">
@@ -54,9 +92,9 @@
         <div class="header__social social">
           <span class="social__title">Поделись с друзьями, им будет интересно!</span>
           <div class="social__icons">
-            <a class="social__icons_item" href="#"><img src="img/header/vk.png" alt="" ></a>
-            <a class="social__icons_item" href="#"><img src="img/header/instagram.png" alt="" ></a>
-            <a class="social__icons_item" href="#"><img src="img/header/youtube.png" alt="" ></a>
+            <a class="social__icons_item" href="https://vk.com/glo_academy"><img src="img/header/vk.png" alt="" ></a>
+            <a class="social__icons_item" href="https://www.instagram.com/islamovartem/"><img src="img/header/instagram.png" alt="" ></a>
+            <a class="social__icons_item" href="https://www.youtube.com/channel/UCVswRUcKC-M35RzgPRv8qUg"><img src="img/header/youtube.png" alt="" ></a>
           </div>
         </div>
         <!-- header__social -->
@@ -112,7 +150,7 @@
             <span class="description__text_bold">Академия «Pro Football»</span> предоставляет возможность каждому ребенку почув-ствовать себя футболистом любительского и
             профессионального уровней. Юный воспитанник получит как правильное физиологическое развитие, так и морально –
             психологическое, овладевая всеми навыками футболиста, игры в команде и индивидуального мастерства.
-            <p class="description__text description__text_two">Методика тренировок разрабатывается опытными тренерами на основе мето-дик ведущих европейских футбольных центров.</p> 
+            <p class="description__text description__text_two">Методика тренировок разрабатывается опытными тренерами на основе мето-дик ведущих европейских футбольных центров.
             <span class="description__text_bold">Все тренеры и помощники тренеров обладают лицензиями категорий «В», «С» UEFA.</span>
             </p>
         </div>
@@ -143,31 +181,31 @@
             <h3 class="block__title">"BabyStart"</h3>
             <span class="block__age">В этой группе тренируются дети от 3- 4,5 лет!</span>
             <span class="block__price">от 12 690 тенге</span>
-            <button class="button block__button" data-toggle="modal">Подробнее</button>
+            <button class="button block__button" data-toggle="modalgroup">Подробнее</button>
           </div>
           <div class="block__item row__item">
             <h3 class="block__title">"Beginners"</h3>
             <span class="block__age">В этой группе тренируются дети от 5- 6 лет!</span>
             <span class="block__price">от 14 290 тенге</span>
-            <button class="button block__button" data-toggle="modal">Подробнее</button>
+            <button class="button block__button" data-toggle="modalgroup">Подробнее</button>
           </div>
           <div class="block__item row__item">
             <h3 class="block__title">"Ювеналы"</h3>
             <span class="block__age">В этой группе тренируются дети от 7- 8 лет!</span>
             <span class="block__price">от 15 300 тенге</span>
-            <button class="button block__button" data-toggle="modal">Подробнее</button>
+            <button class="button block__button" data-toggle="modalgroup">Подробнее</button>
           </div>
           <div class="block__item row__item">
             <h3 class="block__title">"Ювеналы 2"</h3>
             <span class="block__age">В этой группе тренеруются дети от 9- 12 лет!</span>
             <span class="block__price">от 17 500 тенге</span>
-            <button class="button block__button" data-toggle="modal">Подробнее</button>
+            <button class="button block__button" data-toggle="modalgroup">Подробнее</button>
           </div>
           <div class="block__item row__item">
             <h3 class="block__title">"Юниоры"</h3>
             <span class="block__age">В этой группе тренируются дети от 13- 16 лет!</span>
             <span class="block__price">от 18 900 тенге</span>
-            <button class="button block__button" data-toggle="modal">Подробнее</button>
+            <button class="button block__button" data-toggle="modalgroup">Подробнее</button>
           </div>
           <!-- group__block -->
         </div>
@@ -192,7 +230,7 @@
               <li class="list__item">Бесплатная форма</li>
             </ul>
             <h4 class="subscription__subtitle">бесплатная пробная тренировка</h4>
-            <button class="subscription__button button" data-toggle="modal">Записаться на тренировку</button>
+            <button class="subscription__button button" data-toggle="modalabonoment">Записаться на тренировку</button>
           </div>
           <div class="abonnement__subscription subscription row__item">
             <h3 class="subscription__title subscription__title_intensive">Абонемент <span class="subscription__title_uppercase">“INTENSIVE”</span> </h3>
@@ -204,7 +242,7 @@
               <li class="list__item">Бесплатная форма</li>
             </ul>
             <h4 class="subscription__subtitle">бесплатная пробная тренировка</h4>
-            <button class="subscription__button button" data-toggle="modal">Записаться на тренировку</button>
+            <button class="subscription__button button" data-toggle="modalabonoment">Записаться на тренировку</button>
           </div>
         </div>
       </div>
@@ -219,10 +257,10 @@
         
         <div class="branches__content content">
           <div class="buttons content__buttons">
-            <button class="map-link" data-map="QSI" ><span class="map-link_bold">QSI</span><br>ул. Баян Сулу, 15</button>
-            <button class="map-link" data-map="Дворец «Жастар»" ><span class="map-link_bold">Дворец «Жастар»</span><br>проспект Республики, 34</button>
-            <button class="map-link" data-map="Тарлан АРЕНА"><span class="map-link_bold">Тарлан АРЕНА</span><br>ул. Г. Алиева с пересечением Тауелсыздык</button>
-            <button class="map-link" data-map="Ташенова 16А"><span class="map-link_bold">Ташенова 16А</span><br>улицаТашенова 16А</button>
+            <button class="map-link map-link_active" data-map="QSI" ><span class="map-link_bold">QSI</span><br>ул. Баян Сулу, 15</button>
+            <button class="map-link map-link_active" data-map="Дворец «Жастар»" ><span class="map-link_bold">Дворец «Жастар»</span><br>проспект Республики, 34</button>
+            <button class="map-link map-link_active" data-map="Тарлан АРЕНА"><span class="map-link_bold">Тарлан АРЕНА</span><br>ул. Г. Алиева с пересечением Тауелсыздык</button>
+            <button class="map-link map-link_active" data-map="Ташенова 16А"><span class="map-link_bold">Ташенова 16А</span><br>улицаТашенова 16А</button>
           </div>
           <div  id="map" class="map branches__map">
             
@@ -235,7 +273,7 @@
     </main>
   <footer class="footer">
   
-    <div class="container__contacts">
+    <div class="container">
       <div class="menu footer__menu">
         <div class="logo menu__logo">
           <a class="logo__image footer_logo__image" href="index.html"><img src="img/footer/logo.png" alt=""></a>
@@ -253,15 +291,15 @@
           <a href="#" class="nav__item nav__item">Контакты</a>
         </nav>
         <div class="contacts menu__contacts">
-          <a class="contacts__phone" href="+7(702)440-70-07"><span
-              class="contacts__phone_primary">+7(702)</span>440-70-07</a>
+        <a class="contacts__phone" href="tel:+7(702)440-70-07">
+          <span class="contacts__phone_primary">+7 702 </span>440-70-07</a>
           <button class="contacts__button button button_primary" data-toggle="modal">Перезвоните мне</button>
         </div>
       </div>
       <div class="footer__contacts">
         <span class="footer__rights">© www.pro-football.kz 2008-2015. Все права защищены.</span>
         <div class="footer__logo">
-          <span class="footer__text">Сделано в:</span>
+          <span class="footer__text">Сделано в:Glo academy</span>
           <div class="footer__image">
             <img src="img/footer/footer-logo.png" alt="">
           </div>
@@ -292,6 +330,50 @@
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
+  <div class="modalgroup">
+    <div class="modal__dialog">
+      <button class="modalgroup__close"></button>
+      <h3 class="modal__title">Информация о «Beginners»</h3>
+      <form action="send.php" method="POST" class="form modalgroup__form">
+        <div class="input-group modal__input-group">
+          <label for="modalgroup-user-name" class="label form__label label_light"></label>
+          <input type="text" name="userName" id="modalgroup-user-name" class="input form__input modal__input input_light"
+            placeholder="Как вас зовут:">
+        </div>
+        <div class="input-group modal__input-group">
+          <label for="modalgroup-user-phone" class="label form__label label_light"></label>
+          <input type="tel" name="userPhone" class="input form__input modal__input input_light" id="modalgroup-user-phone"
+            placeholder="Ваш номер телефона:">
+        </div>
+  
+        <button class="button button_primary modal__button">Перезвоните мне</button>
+      </form>
+      <!-- /.form modal__form -->
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <div class="modalabonoment">
+    <div class="modal__dialog">
+      <button class="modalabonoment__close"></button>
+      <h3 class="modal__title">Абонемент «Intensive»</h3>
+      <form action="send.php" method="POST" class="form modalabonoment__form">
+        <div class="input-group modal__input-group">
+          <label for="modalabonoment-user-name" class="label form__label label_light"></label>
+          <input type="text" name="userName" id="modalabonoment-user-name" class="input form__input modal__input input_light"
+            placeholder="Как вас зовут:">
+        </div>
+        <div class="input-group modal__input-group">
+          <label for="modal-user-phone" class="label form__label label_light"></label>
+          <input type="tel" name="userPhone" class="input form__input modal__input input_light" id="modalabonoment-user-phone"
+            placeholder="Ваш номер телефона:">
+        </div>
+  
+        <button class="button button_primary modal__button">Перезвоните мне</button>
+      </form>
+      <!-- /.form modal__form -->
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
   <div class="window">
     <div class="window__dialog">
       <button class="window__close"></button>
@@ -299,7 +381,6 @@
       <h4 class="window__subtitle">Наш менеджер перезвонит вам в течение 15 минут</h4>
       <a class="window__link window__button button_primary" href="https://vk.com/glo_academy">Подписаться на нас в
         соцсетях</a>
-  
     </div>
     <!-- /.window__dialog -->
   </div>

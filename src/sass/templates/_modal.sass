@@ -150,3 +150,89 @@
     text-transform: uppercase
     font-size: 1rem 
     line-height: 20px
+
+.modalabonoment,.modalgroup
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  z-index: 199
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 100%
+  background: rgba($dark, 0.6)
+  display: flex
+  align-items: center
+  justify-content: center
+  &_visible
+    opacity: 1
+    visibility: visible
+   
+  &__dialog
+    position: relative
+    max-width: 400px
+    background:  url('../img/modal/bg.jpg ') no-repeat center/cover
+    color: $light
+  &__close
+    position: absolute
+    right: -2.7rem
+    top: -3rem
+    width: 28px
+    height: 28px
+    background: transparent url('../img/modal/close.png ') no-repeat center
+    border: none
+    margin: 12px
+    cursor: pointer
+    outline: none
+  &__title
+
+    font-family: Roboto
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 23px;
+    text-align: center
+    margin: 0
+    padding: 24px 
+    height: 66px
+    background-color: #33b7d2;
+  &__form
+    display: flex
+    flex-direction: column
+    
+  &__input
+    position: relative!important
+    
+    &-group
+      
+      margin-top: 3.42rem
+      padding: 0 3.42rem
+      display: flex
+      flex-direction: column
+      
+      
+      
+      &:nth-child(2)
+        margin-top: 0
+      
+    &:last-of-type
+      margin-bottom: 1.22rem
+  &__button
+    
+    margin-bottom: 2rem
+    width: 273px
+    padding: 24px 40px
+    border-radius: 30px
+    align-self: center
+    margin-top: 0.5rem
+    margin-bottom: 2.4rem
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #243342;
+    text-transform: capitalize
+  
+  &__policy
+    display: flex
+    position: relative
